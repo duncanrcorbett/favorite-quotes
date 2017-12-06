@@ -31,7 +31,7 @@ export class FavoritesPage {
 
   onRemoveFromFavorites(quote: Quote){
     this.quotesService.removeQuoteFromFavorites(quote);
-    // this.quotes = this.quotesService.getFavoriteQuotes();  // reloads all
+    // this.quotes = this.quotesService.getFavoriteQuotes();  // reloads all instead of deleting one
     const position = this.quotes.findIndex((quoteEl: Quote) => {
       return quoteEl.id == quote.id
     });
